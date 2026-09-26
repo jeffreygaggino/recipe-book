@@ -2,12 +2,16 @@ import type { Recipe } from "../types";
 
 type Props = {
   recipe: Recipe;
+  onClose: () => void;
 };
 
-export function RecipeDetail({ recipe }: Props) {
+export function RecipeDetail({ recipe, onClose }: Props) {
   return (
     <div>
       <h2>{recipe.title}</h2>
+      <button type="button" onClick={onClose}>
+        Close
+      </button>
       {recipe.description && <div>{recipe.description}</div>}
       {recipe.sourceUrl && (
         <a href={recipe.sourceUrl} target="_blank" rel="noreferrer">
