@@ -2,13 +2,13 @@ import type { Recipe } from "../types";
 import { RecipeCard } from "./RecipeCard";
 
 type Props = {
-  recipeArray: Recipe[];
+  recipes: Recipe[];
 };
 
-export function RecipeList(props: Props) {
+export function RecipeList({ recipes }: Props) {
   return (
     <ul>
-      {props.recipeArray.map((recipe) => (
+      {recipes.map((recipe) => (
         <RecipeCard key={recipe.id} recipe={recipe} />
       ))}
     </ul>

@@ -6,11 +6,11 @@ type Props = {
   recipe: Recipe;
 };
 
-export function RecipeCard(props: Props) {
+export function RecipeCard({ recipe }: Props) {
   return (
     <li>
-      {props.recipe.title} • {formatCookTime(props.recipe.cookTimeMins)}
-      <TagList tags={props.recipe.tags} />
+      {recipe.title} • {formatCookTime(recipe.cookTimeMins)}
+      <TagList tags={recipe.tags} />
     </li>
   );
 }

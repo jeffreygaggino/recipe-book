@@ -2,10 +2,10 @@ type Props = {
   tags: string[];
 };
 
-export function TagList(props: Props) {
+export function TagList({ tags }: Props) {
   return (
     <ul>
-      {props.tags.map((tag) => (
+      {tags.map((tag) => (
         <li key={tag}>{tag}</li>
       ))}
     </ul>

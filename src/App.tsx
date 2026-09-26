@@ -5,7 +5,7 @@ export function App() {
   return (
     <main>
       <h1>Recipe Book</h1>
-      <RecipeList recipeArray={recipes} />
+      <RecipeList recipes={recipes} />
     </main>
   );
 }
